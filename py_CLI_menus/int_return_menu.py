@@ -1,8 +1,9 @@
-class StringMenu:
+class IntReturnMenu:
+# Prints to the terminal a menu of the __str__ of each in a list of objects and returns the index of the object that the user chooses
 
-    def __init__(self, string_list, menu_header = "Select one of the following options: "):
+    def __init__(self, object_list, menu_header = "Select one of the following options: "):
         
-        self.string_list = string_list
+        self.object_list = object_list
         self.menu_header = menu_header
         
     def choose(self):
@@ -13,7 +14,7 @@ class StringMenu:
         while not choice_made:
 
             print(f"{self.menu_header}\n")
-            for choice in self.string_list:
+            for choice in self.object_list:
                 choice_index += 1
                 print(f"{choice_index} - {choice}")
 
