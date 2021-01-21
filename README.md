@@ -12,15 +12,15 @@ Written in pure Python, no other dependencies. Created with **Python 3.9**. Unte
 git clone git@github.com:IXIXIXIXIXIXIXIXIX/pyMenus.git
 
 ### Use
-Constructor for both IntReturnMenu and ObjectReturnMenu take a list of objects as an argument and a 
+Constructor for both **IntReturnMenu** and **ObjectReturnMenu** take a list of objects as an argument and a 
 string as an optional argument. The optional arg is the string that prompts the user to choose an 
 option. Absent this argument, there is a default.
 
 Ensure that the objects in your list are either human-readable strings or have their \_\_str\_\_ 
 defined as recognisable unique strings as this is what the user will be presented to choose from.
 
-Instances of IntReturnMenu will return the index of the object that the user selects as an *int*.
-Instances of ObjectReturnMenu will return the object chosen by the user.
+Instances of **IntReturnMenu** will return the index of the object that the user selects as an *int*.
+Instances of **ObjectReturnMenu** will return the object instance chosen by the user.
 
-IntReturnMenu lends itself particularly well to lists of strings, with the return indicating which 
+**IntReturnMenu** lends itself particularly well to lists of strings, with the return indicating which 
 of several different programmatic pathways to progress.
