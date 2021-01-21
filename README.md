@@ -13,7 +13,7 @@ git clone git@github.com:IXIXIXIXIXIXIXIXIX/pyMenus.git
 
 ### Use
 Constructor for both IntReturnMenu and ObjectReturnMenu take a list of objects as an argument and a 
-string as an optional argument. The optional arg is the sting that prompts the user to choose an 
+string as an optional argument. The optional arg is the string that prompts the user to choose an 
 option. Absent this argument, there is a default.
 
 Ensure that the objects in your list are either human-readable strings or have their __str__ 
