@@ -16,7 +16,7 @@ Constructor for both IntReturnMenu and ObjectReturnMenu take a list of objects a
 string as an optional argument. The optional arg is the string that prompts the user to choose an 
 option. Absent this argument, there is a default.
 
-Ensure that the objects in your list are either human-readable strings or have their __str__ 
+Ensure that the objects in your list are either human-readable strings or have their \_\_str\_\_ 
 defined as recognisable unique strings as this is what the user will be presented to choose from.
 
 Instances of IntReturnMenu will return the index of the object that the user selects as an *int*.
