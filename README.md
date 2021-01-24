@@ -19,8 +19,16 @@ option. Absent this argument, there is a default.
 Ensure that the objects in your list are either human-readable strings or have their \_\_str\_\_ 
 defined as recognisable unique strings as this is what the user will be presented to choose from.
 
-Instances of **IntReturnMenu** will return the index of the object that the user selects as an *int*.
-Instances of **ObjectReturnMenu** will return the object instance chosen by the user.
+For both classes included, once instantiated, the menu will be printed and user response returned 
+by invoking the `choose()` method. The `choose()` method takes an optional boolean argument (defaults
+to `False`), confirm. If `True` is passed into the method (e.g. `class_instance.choose(True)`), the
+user will be prompted to confirm their choice after making their initial selection.
+
+When the `choose()` method is called, instances of **IntReturnMenu** will return the index of the object 
+that the user selects as an *int*.
+
+When the `choose()` method is called, instances of **ObjectReturnMenu** will return the object instance 
+chosen by the user.
 
 **IntReturnMenu** lends itself particularly well to lists of strings, with the return indicating which 
 of several different programmatic pathways to progress.
