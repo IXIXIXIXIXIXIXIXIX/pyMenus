@@ -6,28 +6,43 @@ class IntReturnMenu:
         self.object_list = object_list
         self.menu_header = menu_header
         
-    def choose(self):
+    def choose(self, confirm=False):
 
-        choice_index = 0
-        choice_made = False
+        re_ask = True
+        while re_ask:
 
-        while not choice_made:
+            choice_index = 0
+            choice_made = False
 
-            print(f"{self.menu_header}\n")
-            for choice in self.object_list:
-                choice_index += 1
-                print(f"{choice_index} - {choice}")
+            while not choice_made:
 
-            option = input(f"Choose an option (1-{choice_index}) or Q to quit: ")
+                print(f"{self.menu_header}\n")
+                for choice in self.object_list:
+                    choice_index += 1
+                    print(f"{choice_index} - {choice}")
 
-            if option.lower() == 'q':
-                return None
+                option = input(f"Choose an option (1-{choice_index}) or Q to quit: ")
+
+                if option.lower() == 'q':
+                    return None
+                
+                try:
+                    option_int = int(option)
+                    choice_made = True
+                except:
+                    choice_index = 0
+                    continue
             
-            try:
-                option_int = int(option)
-                choice_made = True
-            except:
-                choice_index = 0
-                continue
+            if confirm:
+                conf = None 
+                while conf != 'y' and conf !='n':
+                    conf = input(f"You have selected {option_int} - {self.object_list[option_int - 1]}. Confirm (Y/N)? ").lower()
+                
+                if conf == 'y':
+                    re_ask = False
+                else:
+                    re_ask = True
+            else:
+                re_ask = False
         
         return option_int - 1

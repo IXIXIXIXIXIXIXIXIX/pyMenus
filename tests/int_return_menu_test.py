@@ -50,4 +50,6 @@ class TestIntReturnMenu(unittest.TestCase):
         self.list_of_options_1.append("New fifth option")
         self.assertEqual(5, len(string_menu.object_list))
 
-
+    def test_confirm_loop(self):
+        string_menu = IntReturnMenu(self.list_of_options_1, "Check y, n and other inputs to confirm work as expected: ")
+        self.assertEqual(0, string_menu.choose(True))
