@@ -34,7 +34,7 @@ chosen by the user.
 of several different programmatic pathways to progress.
 
 Also included is the standalone funtion **binary_choice**. This takes an optional string argument.
-When invoked, `binary_choice(query)` prompts the user for a Y or N response at the terminal. The prompt is 
+When invoked, `binary_choice()` prompts the user for a Y or N response at the terminal. The prompt is 
 comprised of the optional string argument (default: "*Confirm*") concatenated with "*(Y/N)? *".
 
 All methods and functions loop until a permitted response is received from the user. Alpha user responses  
