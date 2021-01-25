@@ -25,6 +25,12 @@ class TestObjectReturnMenu(unittest.TestCase):
             "Third Option",
             "Fourth Option - choose this one"
         ]
+        self.list_of_options_4 = [
+            "CHOOSE Q",
+            "CHOOSE Q",
+            "CHOOSE Q",
+            "CHOOSE Q"
+        ]
         self.menu_header = "Select one of the following options: "
         self.menu_header_2 = "Choose Q this time: "
 
@@ -44,7 +50,7 @@ class TestObjectReturnMenu(unittest.TestCase):
         self.assertEqual("Fourth Option - choose this one", string_menu.choose())
 
     def test_choose_q(self):
-        string_menu = ObjectReturnMenu(self.list_of_options_3, self.menu_header_2)
+        string_menu = ObjectReturnMenu(self.list_of_options_4, self.menu_header_2)
         self.assertEqual(None, string_menu.choose())
 
     def test_append_option(self):
